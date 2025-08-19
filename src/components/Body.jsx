@@ -1,0 +1,30 @@
+import React from 'react'
+import {
+  createBrowserRouter,
+  RouterProvider,
+} from "react-router";
+
+import Header from './Header'
+import Browse from "./Browse"
+import Login from './Login'
+
+const Body = () => {
+  const router = createBrowserRouter([
+    {
+      path: "/",
+      element:<Login />,
+    },
+    {
+      path: "/browse",
+      element:<Browse />,
+    },
+  ]);
+
+  return (
+    <div>
+    <RouterProvider router={router} />
+    </div>
+  )
+}
+
+export default Body
